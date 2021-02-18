@@ -10,7 +10,7 @@
         </div>
       </ng-template>
       <ng-template [ngIf]="!isLoading && data.length>0">
-        <app-table></app-table>
+        <app-table [data]="data"></app-table>
       </ng-template>
     </div>
   </div>
