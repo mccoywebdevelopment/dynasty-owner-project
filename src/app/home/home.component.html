@@ -1,8 +1,17 @@
 <div class="container">
-    <div class="row" >
-        <div class="col-lg-12">
-            <h1 class="text-center">Git Commit History</h1>
-            <app-table></app-table>
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="text-center">Git Commit History</h1>
+      <ng-template [ngIf]="isLoading">
+        <div class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
+      </ng-template>
+      <ng-template [ngIf]="!isLoading">
+        <app-table></app-table>
+      </ng-template>
     </div>
+  </div>
 </div>
