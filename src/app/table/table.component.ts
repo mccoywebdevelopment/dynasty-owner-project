@@ -14,7 +14,8 @@ export class TableComponent implements OnInit {
   _getDateAndTime = (date) => {
     let current = new Date(date);
     let cDate = current.getFullYear() + '-' + (current.getMonth() + 1) + '-' + current.getDate();
-    let cTime = current.getHours() + ":" + current.getMinutes();
+
+    let cTime = current.getHours() + ":" + ((current.getMinutes()<10?'0':'') + current.getMinutes())
     let dateTime = cDate + '\n' + cTime;
 
     var hours = current.getHours();
