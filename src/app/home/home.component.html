@@ -9,7 +9,7 @@
           </div>
         </div>
       </ng-template>
-      <ng-template [ngIf]="!isLoading">
+      <ng-template [ngIf]="!isLoading && data.length>0">
         <app-table></app-table>
       </ng-template>
     </div>
